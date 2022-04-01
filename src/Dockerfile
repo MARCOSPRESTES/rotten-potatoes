@@ -9,7 +9,7 @@ WORKDIR /app
 COPY /requirements.txt .
 
 ### Instalando pacotes e dependências.
-RUN pip install -r /app/requirements.txt
+RUN pip install -r requirements.txt
 
 ### Copiando projeto.
 COPY . /app
