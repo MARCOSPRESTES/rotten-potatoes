@@ -6,13 +6,13 @@ FROM python:3.8-slim-buster
 WORKDIR /app
 
 ### Copiando arquivos para serem instalados.
-COPY src/requirements.txt .
+COPY /requirements.txt .
 
 ### Instalando pacotes e dependências.
 RUN pip install -r /app/requirements.txt
 
 ### Copiando projeto.
-COPY src/ /app
+COPY . /app
 
 ### Expondo porta 5000.
 EXPOSE 5000
